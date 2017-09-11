@@ -22,36 +22,33 @@
 	
 	<div class="list text-center">
 		<p>Just choose a song from the list and play the drums along with it</p>
-		<div class="dropdown">
-			<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">SONGS LIST
-			<span class="caret"></span></button>
-			<ul class="dropdown-menu dropdown-menu-center">
-				<li><a href="#">HTML</a></li>
-				<li><a href="#">CSS</a></li>
-				<li><a href="#">JavaScript</a></li>
-			</ul>
+		<div class="form-group">
+			<select class="form-control" id="sel1">
+				<option value="audio/1.mp3">Hi-Hat</option>
+				<option value="audio/2.mp3">Snare</option>
+				<option value="audio/3.mp3">Kick</option>
+			</select>
 		</div>
+		<button type="button" class="btn btn-default play-audio">PLAY</button>
 	</div>
 	
 	<div class="example text-center">
 		<p>Video example:</p>
 		<video poster="poster.png" id="video">
 			<source src="audio/video.mp4" />
-			<source src="video/video.ogg" />
-			<source src="video/video.webm" />
 		</video>
 		<br />
-		<button type="button" class="btn btn-primary">PLAY</button>
+		<button type="button" class="btn btn-default play-pause">PLAY</button>
 	</div>
 	
 	<div class="drums">
 		<div class="drums__kit">
-			<div class="bass"></div>
-			<div class="snare"></div>
-			<div class="hi-hat"></div>
-			<div class="tom-2"></div>
-			<div class="ride"></div>
-			<div class="tom-1"></div>
+			<div data-key="67" data-sound="audio/bass.mp3" class="bass"></div>
+			<div data-key="86" data-sound="audio/snare.mp3" class="snare"></div>
+			<div data-key="90" data-sound="audio/hihat.mp3" class="hi-hat"></div>
+			<div data-key="78" data-sound="audio/tom2.mp3" class="tom-2"></div>
+			<div data-key="88" data-sound="audio/ride.mp3" class="ride"></div>
+			<div data-key="66" data-sound="audio/tom1.mp3" class="tom-1"></div>
 			<div class="bass-pedal"></div>
 			<div class="bass-pedal-kick"></div>
 		</div>

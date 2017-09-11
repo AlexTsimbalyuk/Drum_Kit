@@ -30,6 +30,9 @@ body {
 .list {
   width: 100%;
   height: 100px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   border: 1px solid yellow;
 }
 .list p {
@@ -37,6 +40,14 @@ body {
   font-size: 16px;
   font-family: 'Josefin Sans', sans-serif;
   letter-spacing: 0.1em;
+  width: 100%;
+}
+.list .form-group {
+  width: 250px;
+}
+.list .play-audio {
+  height: 34px;
+  margin-left: 10px;
 }
 /* --- drums --- */
 .drums {
@@ -206,8 +217,7 @@ body {
 }
 .snare.active,
 .tom-1.active,
-.tom-2.active,
-.bass.active {
+.tom-2.active {
   animation: play_drums .3s ;
   box-shadow: inset 0px 0px 25px 0px grey;
 }
@@ -215,6 +225,9 @@ body {
 .ride.active {
   animation: play_cymbals .2s ;
   box-shadow: inset 0px 0px 25px 0px grey;
+}
+.bass.active {
+  animation: play_drums .3s ;
 }
 .bass-pedal-kick.active {
   animation: play_pedal .3s;

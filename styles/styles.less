@@ -55,9 +55,20 @@ body {
 /* --- list --- */
 .list {
 	.setWidthHeight( 100%, 100px );
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
 	border: 1px solid yellow;
 		p {
 			.createWhiteFont(); 
+			width: 100%;
+		}
+		.form-group {
+			width: 250px;
+		}
+		.play-audio {
+			height: 34px;
+			margin-left: 10px;
 		}
 }
 
@@ -200,13 +211,16 @@ body {
 		top: 210px;
 	}
 }
-.snare.active, .tom-1.active, .tom-2.active, .bass.active {
+.snare.active, .tom-1.active, .tom-2.active {
 	animation: play_drums .3s ;
 	box-shadow: inset 0px 0px 25px 0px grey;
 }
 .hi-hat.active, .ride.active {
 	animation: play_cymbals .2s ;
 	box-shadow: inset 0px 0px 25px 0px grey;
+}
+.bass.active {
+	animation: play_drums .3s ;
 }
 .bass-pedal-kick.active {
 	animation: play_pedal .3s;
@@ -242,6 +256,39 @@ body {
 		transform: scale(0.65);
 	} 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
