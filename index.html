@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drum Kit</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet/less" type="text/css" href="styles/styles.less">
+	<script src="scripts/less.min.js"></script>
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	
+	<div class="title">
+		<h1>DRUM KIT</h1>
+	</div>
+	
+	<div class="list text-center">
+		<p>Just choose a song from the list and play the drums along with it</p>
+		<div class="dropdown">
+			<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">SONGS LIST
+			<span class="caret"></span></button>
+			<ul class="dropdown-menu dropdown-menu-center">
+				<li><a href="#">HTML</a></li>
+				<li><a href="#">CSS</a></li>
+				<li><a href="#">JavaScript</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="example text-center">
+		<p>Video example:</p>
+		<video poster="poster.png" id="video">
+			<source src="audio/video.mp4" />
+			<source src="video/video.ogg" />
+			<source src="video/video.webm" />
+		</video>
+		<br />
+		<button type="button" class="btn btn-primary">PLAY</button>
+	</div>
+	
+	<div class="drums">
+		<div class="drums__kit">
+			<div class="bass"></div>
+			<div class="snare"></div>
+			<div class="hi-hat"></div>
+			<div class="tom-2"></div>
+			<div class="ride"></div>
+			<div class="tom-1"></div>
+			<div class="bass-pedal"></div>
+			<div class="bass-pedal-kick"></div>
+		</div>
+		<div class="drums__info">
+			<p class="text-center">Keys to play drumkit:</p>
+			<ul>
+				<li>Z - hi hat</li>
+				<li>X - ride</li>
+				<li>C - bass drum</li>
+				<li>V - snare drum</li>
+				<li>B - high tom</li>
+				<li>N - floor tom</li>
+			</ul>
+		</div>
+	</div>
+	
+	<script src="scripts/script.js"></script>
+
+ </body>
+</html>

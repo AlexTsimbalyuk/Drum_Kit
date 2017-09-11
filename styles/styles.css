@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+* {
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  background: radial-gradient(ellipse farthest-corner, #192431 0%, #000000 99%);
+}
+/* --- title --- */
+.title h1 {
+  color: #FFFFFF;
+  font-size: 18px;
+  font-family: 'Josefin Sans', sans-serif;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 40px;
+  padding: 15px 0 15px 0;
+  text-shadow: 2px 2px 0 #000000, 3px 3px 0 #FFFFFF;
+}
+/* --- list --- */
+.list {
+  width: 100%;
+  height: 100px;
+  border: 1px solid yellow;
+}
+.list p {
+  color: #FFFFFF;
+  font-size: 16px;
+  font-family: 'Josefin Sans', sans-serif;
+  letter-spacing: 0.1em;
+}
+/* --- drums --- */
+.drums {
+  width: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 1px solid orange;
+}
+/* --- drums__kit --- */
+.drums__kit {
+  width: 450px;
+  height: 360px;
+  position: relative;
+  border: 1px solid yellow;
+}
+.drums__kit .snare,
+.drums__kit .tom-1,
+.drums__kit .tom-2 {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(ellipse farthest-corner, grey 0%, white 35%);
+  border: 12px double #848484;
+}
+.drums__kit .snare {
+  width: 140px;
+  height: 140px;
+  top: 200px;
+  left: 55px;
+}
+.drums__kit .tom-1 {
+  width: 120px;
+  height: 120px;
+  top: 75px;
+  left: 133px;
+}
+.drums__kit .tom-2 {
+  width: 160px;
+  height: 160px;
+  top: 195px;
+  left: 250px;
+}
+.drums__kit .ride,
+.drums__kit .hi-hat {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(ellipse farthest-corner, black 0%, #b18904 5%, #8a4b08 6%, #f2f5a9 36%);
+}
+.drums__kit .ride {
+  width: 180px;
+  height: 180px;
+  top: 50px;
+  left: 260px;
+}
+.drums__kit .hi-hat {
+  width: 130px;
+  height: 130px;
+  top: 130px;
+  left: 10px;
+}
+.drums__kit .bass {
+  width: 236px;
+  height: 171px;
+  top: 8%;
+  left: 50%;
+  position: absolute;
+  margin-left: -115px;
+  background-image: url("../images/bass.png");
+  background-size: cover;
+}
+.drums__kit .bass-pedal {
+  width: 24px;
+  height: 80px;
+  top: 210px;
+  left: 50%;
+  position: absolute;
+  margin-left: -12px;
+  background-color: grey;
+  border: 3px double white;
+}
+.drums__kit .bass-pedal-kick {
+  width: 24px;
+  height: 24px;
+  top: 205px;
+  left: 50%;
+  position: absolute;
+  margin-left: -12px;
+  background: radial-gradient(ellipse farthest-corner, black 0%, white 15%);
+  border-radius: 50%;
+  border: 1px solid grey;
+}
+/* --- drums__info --- */
+.drums__info {
+  color: #FFFFFF;
+  font-size: 16px;
+  font-family: 'Josefin Sans', sans-serif;
+  letter-spacing: 0.1em;
+  width: 100%;
+  height: auto;
+  border: 1px solid yellow;
+}
+.drums__info p {
+  color: #FFFFFF;
+  font-size: 18px;
+  font-family: 'Josefin Sans', sans-serif;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-top: 10px;
+  letter-spacing: 0.25em;
+}
+.drums__info .drums__info li {
+  padding-left: 15px;
+}
+/* --- drums animations --- */
+@keyframes play_drums {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-1px, -1px);
+  }
+  40% {
+    transform: translate(-1px, 1px);
+  }
+  60% {
+    transform: translate(1px, -1px);
+  }
+  80% {
+    transform: translate(1px, 1px);
+  }
+}
+@keyframes play_cymbals {
+  0% {
+    transform: perspective(800px) rotateX(350deg);
+  }
+  25% {
+    transform: perspective(800px) rotateX(340deg);
+  }
+  50% {
+    transform: perspective(800px) rotateX(330deg);
+  }
+  75% {
+    transform: perspective(800px) rotateX(320deg);
+  }
+  100% {
+    transform: perspective(800px) rotateX(360deg);
+  }
+}
+@keyframes play_pedal {
+  0% {
+    top: 190px;
+  }
+  20% {
+    top: 200px;
+  }
+  40% {
+    top: 210px;
+  }
+  60% {
+    top: 220px;
+  }
+  80% {
+    top: 210px;
+  }
+}
+.snare.active,
+.tom-1.active,
+.tom-2.active,
+.bass.active {
+  animation: play_drums .3s ;
+  box-shadow: inset 0px 0px 25px 0px grey;
+}
+.hi-hat.active,
+.ride.active {
+  animation: play_cymbals .2s ;
+  box-shadow: inset 0px 0px 25px 0px grey;
+}
+.bass-pedal-kick.active {
+  animation: play_pedal .3s;
+}
+/* --- example --- */
+.example {
+  width: 450px;
+  height: auto;
+  border: 1px solid pink;
+}
+.example p {
+  color: #FFFFFF;
+  font-size: 18px;
+  font-family: 'Josefin Sans', sans-serif;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.example #video {
+  width: 450px;
+  height: auto;
+  border: 1px solid red;
+  padding: 15px;
+}
+/* --- media queries --- */
+@media screen and (max-width: 500px) {
+  .example,
+  .drums {
+    transform: scale(0.75);
+  }
+  .example {
+    height: 250px;
+    /* --------------------- */
+  }
+}
+@media screen and (max-width: 380px) {
+  .example,
+  .drums {
+    transform: scale(0.65);
+  }
+}
