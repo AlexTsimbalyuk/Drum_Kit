@@ -21,7 +21,7 @@ video.ontimeupdate = function() {
 	}
 }
 
-/* --- drum kit --- */
+/* --- control of drum kit from the keyboard --- */
 
 var drumPedal = document.querySelector(".bass-pedal-kick");
 var key;
@@ -54,29 +54,32 @@ window.addEventListener("keyup", function( event ) {
 });
 
 /* --- audio player --- */
-/*
-function render() {
+
+var audioBtn = document.querySelector(".audio-button");
+	audioBtn.addEventListener( "click", playAudio );
+
+function playAudio() {
+
+	if ( audioBtn.innerHTML == "PLAY" ) {
+		var audio = new Audio();
+		audio.src = songSelect();
+		audio.play();
+		audioBtn.innerHTML = "PAUSE";
+	} 
+	else if ( audioBtn.innerHTML == "PAUSE" ) {
+		window.location.reload();
+	}
+}
+
+function songSelect() {
 	var opt = document.querySelectorAll("option");
 
 	for ( var i = 0; i < opt.length; i++ ){
 		if ( opt[i].selected ) {
-			song = opt[i].value;
+			return opt[i].value;
 		}
 	}
 }
-
-var playAudio = document.querySelector(".play-audio");
-
-playAudio.onclick = function() {
-	
-	render();
-	var audio = new Audio();
-	audio.pause();
-	audio.src = song;
-	audio.play();
-}
-*/
-
 
 
 
