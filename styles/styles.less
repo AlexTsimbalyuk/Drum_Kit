@@ -22,7 +22,7 @@
 	font-weight: bold;
 	text-transform: uppercase;
 }
-@bgColor: radial-gradient(ellipse farthest-corner, #192431 0%, #000000 99%); 
+@bgColor: radial-gradient(ellipse farthest-corner, #000000 0%, #000000 100%); 
 @cymbalColor: radial-gradient(ellipse farthest-corner, black 0%, #B18904 5%, #8A4B08 6%, #F2F5A9 36%);
 @drumColor: radial-gradient(ellipse farthest-corner, grey 0%, white 35%);
 
@@ -47,8 +47,10 @@ body {
 	h1 {
 		.createWhiteTitle();
 		font-size: 40px;
+		color: #C9302C;
 		padding: 15px 0 15px 0;
 		text-shadow: 2px 2px 0 #000000, 3px 3px 0 #FFFFFF;
+		margin-top: 25px;
 	}
 }
 
@@ -58,7 +60,6 @@ body {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-	border: 1px solid yellow;
 		p {
 			.createWhiteFont(); 
 			width: 100%;
@@ -79,14 +80,13 @@ body {
 	justify-content: center;
     align-items: center;
 	flex-wrap: wrap;
-	border: 1px solid orange;
+	padding: 0 10px;
 }
 
 /* --- drums__kit --- */
 .drums__kit {
 	.setWidthHeight( 450px, 360px );
 	position: relative;
-	border: 1px solid yellow;
 		.snare, .tom-1, .tom-2 {
 			position: absolute;
 			border-radius: 50%;
@@ -95,7 +95,7 @@ body {
 		}
 		.snare {
 			.setWidthHeight( 140px, 140px );
-			.setTopLeft( 200px, 55px ); 
+			.setTopLeft( 200px, 45px ); 
 		}
 		.tom-1 {
 			.setWidthHeight( 120px, 120px );
@@ -144,11 +144,11 @@ body {
 			border: 1px solid grey;
 		}
 }
+
 /* --- drums__info --- */
 .drums__info {
 	.createWhiteFont();
 	.setWidthHeight( 100%, auto );
-	border: 1px solid yellow;
 		p {
 			.createWhiteTitle();
 			padding-top: 10px;
@@ -228,26 +228,26 @@ body {
 
 /* --- example --- */
 .example {
-	.setWidthHeight( 450px, auto );
-	border: 1px solid pink;
-		p {
-			.createWhiteTitle();
-		}
+	.setWidthHeight( 450px, 547px );
 		#video {
 			.setWidthHeight( 450px, auto );
-			border: 1px solid red;
-			padding: 15px;
 		}
 }
 
 /* --- media queries --- */
+@media screen and (max-width: 899px) {
+	.example {
+		.setWidthHeight( 450px, 425px );
+	}
+}
 @media screen and (max-width: 500px) {
+	.list,
 	.example,
 	.drums {
 		transform: scale(0.75); 
 	} 
 	.example {
-		height: 250px; /* --------------------- */
+		height: 275px; 
 	}
 }
 @media screen and (max-width: 380px) {
@@ -255,40 +255,7 @@ body {
 	.drums {
 		transform: scale(0.65);
 	} 
+	.example {
+		height: 200px; 
+	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

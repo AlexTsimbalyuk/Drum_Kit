@@ -12,7 +12,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   align-content: flex-start;
-  background: radial-gradient(ellipse farthest-corner, #192431 0%, #000000 99%);
+  background: radial-gradient(ellipse farthest-corner, #000000 0%, #000000 100%);
 }
 /* --- title --- */
 .title h1 {
@@ -23,8 +23,10 @@ body {
   font-weight: bold;
   text-transform: uppercase;
   font-size: 40px;
+  color: #C9302C;
   padding: 15px 0 15px 0;
   text-shadow: 2px 2px 0 #000000, 3px 3px 0 #FFFFFF;
+  margin-top: 25px;
 }
 /* --- list --- */
 .list {
@@ -33,7 +35,6 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  border: 1px solid yellow;
 }
 .list p {
   color: #FFFFFF;
@@ -56,14 +57,13 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  border: 1px solid orange;
+  padding: 0 10px;
 }
 /* --- drums__kit --- */
 .drums__kit {
   width: 450px;
   height: 360px;
   position: relative;
-  border: 1px solid yellow;
 }
 .drums__kit .snare,
 .drums__kit .tom-1,
@@ -77,7 +77,7 @@ body {
   width: 140px;
   height: 140px;
   top: 200px;
-  left: 55px;
+  left: 45px;
 }
 .drums__kit .tom-1 {
   width: 120px;
@@ -148,7 +148,6 @@ body {
   letter-spacing: 0.1em;
   width: 100%;
   height: auto;
-  border: 1px solid yellow;
 }
 .drums__info p {
   color: #FFFFFF;
@@ -235,37 +234,35 @@ body {
 /* --- example --- */
 .example {
   width: 450px;
-  height: auto;
-  border: 1px solid pink;
-}
-.example p {
-  color: #FFFFFF;
-  font-size: 18px;
-  font-family: 'Josefin Sans', sans-serif;
-  letter-spacing: 0.1em;
-  font-weight: bold;
-  text-transform: uppercase;
+  height: 547px;
 }
 .example #video {
   width: 450px;
   height: auto;
-  border: 1px solid red;
-  padding: 15px;
 }
 /* --- media queries --- */
+@media screen and (max-width: 899px) {
+  .example {
+    width: 450px;
+    height: 425px;
+  }
+}
 @media screen and (max-width: 500px) {
+  .list,
   .example,
   .drums {
     transform: scale(0.75);
   }
   .example {
-    height: 250px;
-    /* --------------------- */
+    height: 275px;
   }
 }
 @media screen and (max-width: 380px) {
   .example,
   .drums {
     transform: scale(0.65);
+  }
+  .example {
+    height: 200px;
   }
 }

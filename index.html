@@ -24,41 +24,42 @@
 		<p>Just choose a song from the list and play the drums along with it</p>
 		<div class="form-group">
 			<select class="form-control" id="sel1">
-				<option value="audio/1.mp3">Hi-Hat</option>
-				<option value="audio/2.mp3">Snare</option>
-				<option value="audio/3.mp3">Kick</option>
+				<option value="audio/System Of A Down - Aerials.mp3">SOAD - Aerials</option>
+				<option value="audio/Red Hot Chili Peppers - Otherside.mp3">RHCP - Otherside</option>
+				<option value="audio/Nirvana - In Bloom.mp3">Nirvana - In Bloom</option>
+				<option value="audio/The Offspring - Pretty Fly For A White Guy.mp3">Offspring - Pretty Fly</option>
+				<option value="audio/Rage Against The Machine - Bulls On Parade.mp3">RATM - Bulls On Parade</option>
 			</select>
 		</div>
-		<button type="button" class="btn btn-default audio-button">PLAY</button>
+		<button type="button" class="btn btn-danger audio-button">PLAY</button>
 	</div>
 	
 	<div class="example text-center">
-		<p>Video example:</p>
-		<video poster="poster.png" id="video">
-			<source src="audio/video.mp4" />
+		<video poster="images/poster.png" id="video">
+			<source src="video/example.webm" />
 		</video>
 		<br />
-		<button type="button" class="btn btn-default play-pause">PLAY</button>
+		<button type="button" class="btn btn-danger video-button">PLAY</button>
 	</div>
 	
 	<div class="drums">
 		<div class="drums__kit">
-			<div data-key="67" data-sound="audio/bass.mp3" class="bass"></div>
-			<div data-key="86" data-sound="audio/snare.mp3" class="snare"></div>
-			<div data-key="90" data-sound="audio/hihat.mp3" class="hi-hat"></div>
-			<div data-key="78" data-sound="audio/tom2.mp3" class="tom-2"></div>
-			<div data-key="88" data-sound="audio/ride.mp3" class="ride"></div>
-			<div data-key="66" data-sound="audio/tom1.mp3" class="tom-1"></div>
-			<div class="bass-pedal"></div>
-			<div class="bass-pedal-kick"></div>
+			<div data-key="86" data-sound="audio/bass.mp3" class="bass hit"></div>
+			<div data-key="67" data-sound="audio/snare.mp3" class="snare hit"></div>
+			<div data-key="90" data-sound="audio/hihat.mp3" class="hi-hat hit"></div>
+			<div data-key="78" data-sound="audio/tom2.mp3" class="tom-2 hit"></div>
+			<div data-key="88" data-sound="audio/ride.mp3" class="ride hit"></div>
+			<div data-key="66" data-sound="audio/tom1.mp3" class="tom-1 hit"></div>
+			<div data-key="86" data-sound="audio/bass.mp3" class="bass-pedal hit"></div>
+			<div data-sound="audio/bass.mp3" class="bass-pedal-kick"></div>
 		</div>
 		<div class="drums__info">
 			<p class="text-center">Keys to play drumkit:</p>
 			<ul>
 				<li>Z - hi hat</li>
 				<li>X - ride</li>
-				<li>C - bass drum</li>
-				<li>V - snare drum</li>
+				<li>C - snare drum</li>
+				<li>V - bass drum</li>
 				<li>B - high tom</li>
 				<li>N - floor tom</li>
 			</ul>
